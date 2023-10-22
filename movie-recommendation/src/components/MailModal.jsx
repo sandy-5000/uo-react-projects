@@ -18,6 +18,8 @@ export default function MailModal({ list, setMailModal }) {
 
     const closeMailModal = () => {
         setAnimation('')
+        setFailed(false)
+        setSuccess(false)
         setTimeout(() => {
             setMailModal(false)
         }, 250)
@@ -59,7 +61,8 @@ export default function MailModal({ list, setMailModal }) {
             })
             .catch(error => {
                 setFailed(true)
-                console.error('Error:', error)
+                console.log(failed)
+                console.log('Error:', error)
             })
     }
 
@@ -76,15 +79,15 @@ export default function MailModal({ list, setMailModal }) {
                 </div>
                 <div className="m-body">
                     <label htmlFor="email" className="block mb-2">Enter Email</label>
-                    <input type="email" name="email" id="email" value={recipient} onChange={(e) => setRecipient(e.target.value)} placeholder="Enter Email" className="email rounded-lg px-3 py-2 bg-white" />
-                    <div>
+                    <input type="email" name="email" id="email" value={recipient} onChange={(e) => setRecipient(e.target.value)} placeholder="Enter Email" className="email rounded-sm px-3 py-2 bg-white" />
+                    <div className="h-10">
                         {
                             success &&
-                            <p className="my-2 text-green-700 e-success">Email send successfully</p>
+                            <p className="my-2 px-2 text-green-700 e-success">Email send successfully</p>
                         }
                         {
                             failed &&
-                            <p className="my-2 hidden text-red-500 e-fail">Failed to send Email</p>
+                            <p className="my-2 px-2 text-red-500 e-fail">Failed to send Email</p>
                         }
                     </div>
                 </div>
