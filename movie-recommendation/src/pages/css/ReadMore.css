@@ -1,0 +1,23 @@
+
+.img-hide {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.4s ease-in-out;
+}
+
+.img-show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.heading {
+    @apply w-6/12 text-center text-teal-700 font-bold py-2
+}
+
+.spacer {
+    @apply px-1 text-slate-500 font-extrabold py-2
+}
+
+.info {
+    @apply w-6/12 text-blue-950 font-semibold py-2
+}
