@@ -1,0 +1,24 @@
+.blocker {
+    @apply fixed left-0 top-0 h-full w-full z-[2]
+}
+
+.hot {
+    @apply h-[90px] w-[90px] rounded-full bg-red-500 text-slate-100
+}
+
+.cold {
+    @apply h-[90px] w-[90px] rounded-full bg-green-500 text-slate-100
+}
+
+.mid {
+    @apply h-[90px] w-[90px] rounded-full bg-yellow-400 text-gray-800
+}
+
+.timezone {
+    padding: 10px 20px;
+    background-color: #bd7d41;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
