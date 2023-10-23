@@ -41,7 +41,6 @@ export default function MailModal({ list, setMailModal }) {
             body,
             key
         }
-        console.log(data)
 
         fetch(url, {
             method: 'POST',
@@ -52,7 +51,6 @@ export default function MailModal({ list, setMailModal }) {
         })
             .then(response => response.json())
             .then(response => {
-                console.log(response)
                 if (response.code === 0) {
                     setSuccess(true)
                 } else {
@@ -61,7 +59,6 @@ export default function MailModal({ list, setMailModal }) {
             })
             .catch(error => {
                 setFailed(true)
-                console.log(failed)
                 console.log('Error:', error)
             })
     }

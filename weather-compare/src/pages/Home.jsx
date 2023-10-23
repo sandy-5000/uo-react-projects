@@ -48,7 +48,6 @@ class Home extends Component {
 
     inputOnChange(event) {
         const { id, value } = event.target
-        console.log(value)
         const city_id = this.state.ids.get(value) || null
         this.setState({ [id]: city_id })
         this.setState({ [id + '_input']: value })
@@ -86,8 +85,6 @@ class Home extends Component {
         }
         await setTempAvg(city_1_details)
         await setTempAvg(city_2_details)
-        console.log(city_1_details)
-        console.log(city_2_details)
         if (city_1_details.temp === city_2_details.temp) {
             city_1_details.className = 'mid'
             city_2_details.className = 'mid'
